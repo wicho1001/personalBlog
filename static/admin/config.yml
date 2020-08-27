@@ -3,9 +3,9 @@
     branch: master
 
   publish_mode: editorial_workflow
-  media_forler: static/uploads
+  media_folder: static/uploads
+  media_library: static/uploads
   public_folder: /uploads
-  folder: "static/posts"
 
   collections:
     - name: "blog"
