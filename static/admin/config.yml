@@ -1,0 +1,18 @@
+  backend:
+    name: git-gateway
+    branch: master
+
+  publish_mode: editorial_workflow
+  media_forler: static/uploads
+  public_folder: /uploads
+  folder: "static/posts"
+
+  collections:
+    - name: "blog"
+      label: "Blog"
+      folder: "static/posts"
+      create: true
+      fields:
+        - { label: "Slug", name: "slug", widget: "string" }
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Body", name: "body", widget: "markdown" }
