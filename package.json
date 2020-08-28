@@ -19,7 +19,8 @@
     "gray-matter": "^4.0.2",
     "marked": "^1.1.1",
     "polka": "next",
-    "sirv": "^1.0.0"
+    "sirv": "^1.0.0",
+    "svelte-awesome": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
