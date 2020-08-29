@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "w1ch0_blog",
+  "description": "w1ch0_blog",
   "version": "0.0.1",
   "scripts": {
     "dev": "run-p start:dev watch:css",
@@ -20,7 +20,7 @@
     "marked": "^1.1.1",
     "polka": "next",
     "sirv": "^1.0.0",
-    "svelte-awesome": "^2.3.0"
+    "svelte-icons": "^2.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
