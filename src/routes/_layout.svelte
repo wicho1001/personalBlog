@@ -7,12 +7,11 @@
 
 <style></style>
 
-<main class="flex flex-col h-screen">
+<main class="flex flex-col h-screen overflow-y-scroll bg-dark-600">
 	<Nav {segment}/>
 	
 	<section class="flex-grow">
 		<slot></slot>
 	</section>
-	
 	<Footer {segment}/>
 </main>

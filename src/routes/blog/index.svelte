@@ -21,14 +21,18 @@
 	<title>Blog</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
-
-<ul>
-	{#each posts as post}
-		<!-- we're using the non-standard `rel=prefetch` attribute to
-				tell Sapper to load the data for the page as soon as
-				the user hovers over the link or taps it, instead of
-				waiting for the 'click' event -->
-		<li><a rel='prefetch' href='blog/{post.slug}'>{post.title}</a></li>
-	{/each}
-</ul>
+<section class="w-full flex justify-center">
+	<section class="flex flex-col mt-10 w-10/12">
+		<h1 class="font-montserrat font-bold text-4xl">Recent posts</h1>
+		
+		<ul>
+			{#each posts as post}
+				<li class="px-8 py-5 shadow-md">
+					<a rel='prefetch' href='blog/{post.slug}' class="flex justify-between">
+						{post.title}
+					</a>
+				</li>
+			{/each}
+		</ul>
+	</section>
+</section>
