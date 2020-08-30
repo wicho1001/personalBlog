@@ -26,6 +26,17 @@ module.exports = {
         "800": " #CE2B04",
         "900": "#851200",
       },
+      dark: {
+        "100": "#4C5F73",
+        "200": "#778BA1",
+        "300": "#5D7187",
+        "400": "#405061",
+        "500": "#333E49",
+        "600": "#20272D",
+        "700": "#171D24",
+        "800": " #0F151A",
+        "900": "#0A0E12",
+      },
       neutral: '#312F2F',
       disabled: '#B1B1B1',
       white: '#FFFFFF',
@@ -65,8 +76,6 @@ module.exports = {
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
       none: 'none',
-      'primary-200': '0 0 0 3px #F77D86',
-      'secondary-200': '0 0 0 3px #7DA2F7',
       'box': '0 0 10px 0 rgba(38,39,41,0.2)',
       'up-box': '0 10px 10px 0 rgba(224,230,234,0.8)',
       'down-box': '0 2px 2px 0 rgba(224,230,234,0.8)',
@@ -221,5 +230,8 @@ module.exports = {
   variants:[ 
     'active',
     'responsive',
-  ]
+  ],
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
 }
