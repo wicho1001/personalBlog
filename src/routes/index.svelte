@@ -1,6 +1,8 @@
 <script>
 	import FaAngular from 'svelte-icons/fa/FaAngular.svelte'
 	import FaReact from 'svelte-icons/fa/FaReact.svelte'
+	import FaArrowRight from 'svelte-icons/fa/FaArrowRight.svelte'
+	import FaDownload from 'svelte-icons/fa/FaDownload.svelte'
 </script>
 
 <style>
@@ -90,6 +92,36 @@
 							<br>
 							Ocupalo, no te arrepentiras.
 						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="w-full flex justify-center bg-dark-800 mt-10 py-10">
+		<div class="w-10/12">
+			<div class="grid xs:grid-cols-1 md:grid-cols-2 gap-6">
+				<div class="col-span-1 mt-10">
+					<h1 class="text-primary-50 font-montserrat text-4xl tracking-wider">Tienes un proyecto, hablemos!</h1>
+					<a class="flex items-center text-secondary-300 font-rubik text-3xl break-words" href="mailto: wichoguerrero747@gmail.com">
+						<p class="">Contactame</p>
+						<div class="w-6 h-6 ml-2">
+							<FaArrowRight />
+						</div>
+					</a>
+				</div>
+				<div class="col-span-1 mt-10">
+					<h1 class="text-primary-50 font-montserrat text-4xl tracking-wider">Dejame saber esto para tu proyecto</h1>
+					<h2 class="text-primary-50 font-montserrat text-2xl tracking-wider mt-10">¿Cómo te llamas?</h2>
+					<hr>
+					<h2 class="text-primary-50 font-montserrat text-2xl tracking-wider mt-4">Tu correo, y otro metodo de contacto</h2>
+					<hr>
+					<div class="mt-4 flex">
+						<h2 class="text-primary-50 font-montserrat text-2xl tracking-wider">Hablame mas sobre tu proyecto</h2>
+						<a class="flex items-center justify-center text-secondary-300 font-rubik text-3xl break-words border-b-2 border-secondary-300 ml-4 px-3" href="https://drive.google.com/uc?export=download&id=1sYO0imeaOLeHA5CapIdd2Zyi6AYNSasC">
+							<div class="w-6 h-6">
+								<FaDownload />
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
