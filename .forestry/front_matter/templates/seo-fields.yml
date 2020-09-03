@@ -1,46 +1,46 @@
 ---
-  label: SEO Fields
-  hide_body: true
+label: SEO Fields
+hide_body: true
+fields:
+- name: seo
+  type: field_group
+  config: {}
   fields:
-  - name: seo
-    type: field_group
-    config: {}
-    fields:
-    - name: title
-      type: text
-      config:
-        required: true
-      label: Title
-    - name: description
-      type: textarea
-      default: ''
-      config:
-        required: true
-        wysiwyg: false
-        schema:
-          format: markdown
-      label: Description
-    - name: image
-      type: file
-      config:
-        maxSize: 2
-      label: Image
-    - name: keywords
-      type: tag_list
-      default: []
-      label: Keywords
-    - name: language
-      type: select
-      default: ES
-      config:
-        required: false
-        options:
-        - ES
-        source:
-          type: simple
-          section: 
-          file: 
-          path: 
-      label: Language
-      hidden: true
-    label: SEO
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Title
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: true
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Description
+  - name: image
+    type: file
+    config:
+      maxSize: 2
+    label: Image
+  - name: keywords
+    type: tag_list
+    default: []
+    label: Keywords
+  - name: language
+    type: select
+    default: ES
+    config:
+      required: false
+      options:
+      - ES
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Language
+    hidden: true
+  label: SEO
