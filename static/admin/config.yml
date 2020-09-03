@@ -9,7 +9,7 @@
   collections:
     - name: "blog"
       label: "Blog"
-      folder: "static/posts"
+      folder: "static/content/posts"
       create: true
       fields:
         - { label: "Slug", name: "slug", widget: "string" }

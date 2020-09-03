@@ -7,9 +7,11 @@ import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 import sveltePreprocess from 'svelte-preprocess';
+import typescript from 'rollup-plugin-typescript2';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
+const sourcemap = dev ? "inline" : false;
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const onwarn = (warning, onwarn) =>
@@ -23,12 +25,12 @@ const onwarn = (warning, onwarn) =>
 				require('postcss-import')(),
 				require('postcss-nested')()
 			]
-		}
+		},
 	});
 
 export default {
 	client: {
-		input: config.client.input(),
+		input: config.client.input().replace(/\.js$/, ".ts"),
 		output: config.client.output(),
 		plugins: [
 			replace({
@@ -45,7 +47,13 @@ export default {
 				browser: true,
 				dedupe: ['svelte']
 			}),
-			commonjs(),
+			commonjs({
+				sourceMap: !!sourcemap,
+			}),
+			typescript({
+				noEmitOnError: !dev,
+				sourceMap: !!sourcemap,
+			}),
 
 			legacy && babel({
 				extensions: ['.js', '.mjs', '.html', '.svelte'],
@@ -74,7 +82,7 @@ export default {
 	},
 
 	server: {
-		input: config.server.input(),
+		input: config.server.input().server.replace(/\.js$/, ".ts"),
 		output: config.server.output(),
 		plugins: [
 			replace({
@@ -90,7 +98,13 @@ export default {
 			resolve({
 				dedupe: ['svelte']
 			}),
-			commonjs()
+			commonjs({
+				sourceMap: !!sourcemap,
+			}),
+			typescript({
+				noEmitOnError: !dev,
+				sourceMap: !!sourcemap,
+			}),
 		],
 		external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
 
