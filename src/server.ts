@@ -6,10 +6,12 @@ import * as sapper from '@sapper/server';
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
-express()
-	.use(
-		compression({ threshold: 0 }),
-		sirv('static', { dev }),
-		sapper.middleware()
-	)
-	.listen(PORT).on('error', (err) => console.log(err));
+const app = express()
+  .use(
+    compression({ threshold: 0 }),
+    sirv('static', { dev }),
+    sapper.middleware()
+  )
+  .listen(PORT).on('error', (err) => console.log(err));
+
+export default app;
