@@ -1,12 +1,13 @@
 import fs from "fs";
 import path from "path";
 import grayMatter from "gray-matter";
+import type { Request, Response } from "express";
 
 const getAllPost = () => {
 	try {
-		return fs.readdirSync("static/posts/").map((__filename) => {
+		return fs.readdirSync("static/content/posts/").map((__filename) => {
 			const post = fs.readFileSync(
-				path.resolve("static/posts", __filename),
+				path.resolve("static/content/posts", __filename),
 				"utf-8"
 			);
 			return grayMatter(post).data;
@@ -17,7 +18,7 @@ const getAllPost = () => {
 };
 
 
-export function get(_, res) {
+export function get(_: Request, res: Response) {
 	res.writeHead(200, {
 		"Content-Type": "application/json",
 	});

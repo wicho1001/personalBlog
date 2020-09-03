@@ -2,15 +2,16 @@ import path from "path";
 import fs from "fs";
 import grayMatter from "gray-matter";
 import marked from "marked";
+import type { Request, Response, NextFunction } from "express";
 
-const getPost = (__filename) => {
+const getPost = (__filename: any) => {
 	return fs.readFileSync(
-		path.resolve("static/posts/", `${__filename}.md`),
+		path.resolve("static/content/posts/", `${__filename}.md`),
 		"utf-8"
 	);
 }
 
-export function get(req, res, _) {
+export function get(req: Request, res: Response, _: NextFunction) {
 	const { slug } = req.params;
 
 	const post = getPost(slug);
