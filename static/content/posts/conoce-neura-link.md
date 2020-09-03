@@ -5,7 +5,7 @@ seo:
   title: Esto es el seo
   description: Esta es una prueba
 date: 2020-09-03T03:18:41.000+00:00
-featured_image: https://w1ch0images.s3-us-west-2.amazonaws.com/levedad.jpg
+featured_image: "/wicho_logo.png"
 
 ---
 conoce neura link
