@@ -35,3 +35,5 @@ fields:
   config: {}
   template: seo-fields
   label: SEO
+pages:
+- content/posts/este-es-un-blog-de-prueba.md
