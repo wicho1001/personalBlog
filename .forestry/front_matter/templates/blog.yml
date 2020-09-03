@@ -1,0 +1,37 @@
+---
+label: Blog
+hide_body: false
+fields:
+  - name: type
+    type: text
+    config:
+      required: true
+    label: Type
+    hidden: true
+    default: blog
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Title
+    default: ''
+  - name: date
+    type: datetime
+    description: ''
+    config:
+      required: true
+      date_format:
+      time_format:
+      display_utc: false
+    label: Date
+    default: now
+  - name: featured_image
+    type: file
+    config:
+      maxSize: 2
+    label: Featured Image
+  - name: seo
+    type: include
+    config: {}
+    template: seo-fields
+    label: SEO
