@@ -7,6 +7,8 @@ const ASSETS = `cache${timestamp}`;
 const to_cache = shell.concat(files);
 const cached = new Set(to_cache);
 
+declare var self: ServiceWorkerGlobalScope;
+
 self.addEventListener('install', event => {
   event.waitUntil(
     caches

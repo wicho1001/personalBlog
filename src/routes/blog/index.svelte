@@ -7,7 +7,8 @@
 </script>
 
 <script>
-  export let posts;
+  import type { IBlog } from './interfaces/IBlog';
+  export let posts: IBlog[];
 </script>
 
 <style>
