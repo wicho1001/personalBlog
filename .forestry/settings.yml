@@ -13,10 +13,10 @@ sections:
   new_doc_ext: md
   templates:
   - blog
-upload_dir: assets
-public_path: https://w1ch0gilgamesh.s3.us-east-2.amazonaws.com/assets
+upload_dir: images
+public_path: ''
 front_matter_path: ''
-use_front_matter_path: 
+use_front_matter_path: false
 file_template: ":filename:"
 build:
   preview_output_directory: static/admin
