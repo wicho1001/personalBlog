@@ -24,11 +24,11 @@
   },
   "include": [
       "src/**/*",
-      "src/node_modules/**/*"
+      "src/node_modules/**/*",
+      "static/*"
   ],
   "exclude": [
       "node_modules/*",
       "__sapper__/*",
-      "static/*"
   ],
 }
