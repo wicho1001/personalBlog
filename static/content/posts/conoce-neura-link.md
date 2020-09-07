@@ -12,5 +12,8 @@ conoce neura link
 
 * Esto es algo nuevo
 * yaiiihhhh
+
+![](/wicho_logo.png)
+
 * sadohasoiashdoiad
 * sladjsahdkasdjdakjasd
