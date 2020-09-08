@@ -13,7 +13,6 @@ const getPost = (__filename: any) => {
 
 export function get(req: Request, res: Response, _: NextFunction) {
   const { slug } = req.params;
-
   const post = getPost(slug);
   const renderer = new marked.Renderer();
 
