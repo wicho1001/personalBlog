@@ -30,16 +30,18 @@
     <ul class="grid xs:grid-cols-1 md:grid-cols-3 gap-6 mt-4">
       {#each posts as post}
         <li class="flex flex-col shadow-md bg-dark-800 col-span-1 w-full rounded-2">
-          <div class="">
-            <img class="w-full h-60 object-cover rounded-2" src="{post.featured_image}" alt="">
-          </div>
-          <div class="flex flex-col flex-grow">
-            <div class="px-8 py-5 flex flex-col flex-grow text-primary-50">
-              <p class="font-rubik text-sm text-dark-100">Tiempo de lectura: {post.minutes} min</p>
-              <p class="font-montserrat font-bold text-2xl capitalize">{post.title}</p>
-              <p class="font-rubik">{post.description}</p>
+          <a href="blog/{post.slug}">
+            <div class="">
+              <img class="w-full h-60 object-cover rounded-2" src="{post.featured_image}" alt="">
             </div>
-          </div>
+            <div class="flex flex-col flex-grow">
+              <div class="px-8 py-5 flex flex-col flex-grow text-primary-50">
+                <p class="font-rubik text-sm text-dark-100">Tiempo de lectura: {post.minutes} min</p>
+                <p class="font-montserrat font-bold text-2xl capitalize">{post.title}</p>
+                <p class="font-rubik">{post.description}</p>
+              </div>
+            </div>
+          </a>
         </li>
       {/each}
     </ul>
