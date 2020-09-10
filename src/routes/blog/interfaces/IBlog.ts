@@ -4,4 +4,5 @@ export interface IBlog{
   minutes: number;
   description: string;
   featured_image: string;
+  author: any;
 }
