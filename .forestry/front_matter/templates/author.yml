@@ -1,0 +1,33 @@
+---
+  label: Author
+  hide_body: false
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: Name
+    default: W1CH0
+  - name: bio
+    type: text
+    config:
+      required: true
+    label: Bio
+    default: ''
+  - name: social
+    type: include
+    config:
+      required: true
+    template: social-media
+    label: Social
+  - name: Profile-image
+    type: file
+    config:
+      maxSize: 2
+    label: Profile image
+  - name: seo
+    type: include
+    config: {}
+    template: seo-fields
+    label: SEO
+  

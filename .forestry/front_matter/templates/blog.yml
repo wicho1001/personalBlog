@@ -15,6 +15,12 @@ fields:
     required: true
   label: Title
   default: ''
+- name: minutes
+  type: text
+  config:
+    required: true
+  label: MinutesToRead
+  default: 3
 - name: date
   type: datetime
   description: ''
