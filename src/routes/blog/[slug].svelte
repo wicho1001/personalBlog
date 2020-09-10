@@ -14,7 +14,9 @@
 </script>
 
 <script>
+  import DisqusSvelte from "disqus-svelte"; // You can use any alias.
   export let post;
+
 </script>
 
 <style>
@@ -28,5 +30,6 @@
   <h1 class="font-montserrat font-bold xs:text-4xl md:text-6xl text-primary-50 xs:w-full md:w-8/12 capitalize">{post.title}</h1>
   <div class='xs:w-full md:w-7/12'>
     {@html post.html}
+    <DisqusSvelte identifier="my-blog-post-41" />
   </div>
 </div>

@@ -17,10 +17,6 @@
 </script>
 
 <style>
-  .image-card {
-    max-height: 200px;
-    object-fit: cover;
-  }
 </style>
 
 <svelte:head>
@@ -33,20 +29,15 @@
 
     <ul class="grid xs:grid-cols-1 md:grid-cols-3 gap-6 mt-4">
       {#each posts as post}
-        <li class="flex flex-col shadow-md bg-primary-50 col-span-1 w-full rounded">
+        <li class="flex flex-col shadow-md bg-dark-800 col-span-1 w-full rounded-2">
           <div class="">
-            <img class="w-full h-30 image-card" src="{post.featured_image}" alt="">
+            <img class="w-full h-60 object-cover rounded-2" src="{post.featured_image}" alt="">
           </div>
           <div class="flex flex-col flex-grow">
-            <div class="px-8 py-5 flex-grow">
+            <div class="px-8 py-5 flex flex-col flex-grow text-primary-50">
+              <p class="font-rubik text-sm text-dark-100">Tiempo de lectura: {post.minutes} min</p>
+              <p class="font-montserrat font-bold text-2xl capitalize">{post.title}</p>
               <p class="font-rubik">{post.description}</p>
-            </div>
-            <div class="flex justify-end py-4 bg-secondary-500 px-8">
-              <a rel='prefetch' href='blog/{post.slug}' class="flex items-baseline text-primary-50 text-xl">Leer mas 
-                <div class="h-3 w-3 text-primary-50 ml-3">
-                  <FaArrowRight />
-                </div>
-              </a>
             </div>
           </div>
         </li>
