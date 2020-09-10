@@ -20,7 +20,7 @@
       required: true
     template: social-media
     label: Social
-  - name: Profile-image
+  - name: profile-image
     type: file
     config:
       maxSize: 2
