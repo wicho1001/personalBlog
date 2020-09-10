@@ -12,14 +12,14 @@ const getPage = (__filename: string) => {
 
 
 export function get(req: Request, res: Response) {
-  const { slug } = req.params;
-  let slugCopy = slug;
-  if (slug === undefined) {
-    slugCopy = "index"
+  const { page } = req.params;
+  let pageCopy = page;
+  if (page === undefined) {
+    pageCopy = "index"
   }
-  const page = getPage(slugCopy);
+  const getPageMarkdown = getPage(pageCopy);
 
-  const { data } = grayMatter(page);
+  const { data } = grayMatter(getPageMarkdown);
 
   if(data) {
     res.writeHead(200, {

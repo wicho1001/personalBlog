@@ -1,7 +1,7 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: "static/admin"
+admin_path: static/admin
 webhook_url: 
 sections:
 - type: directory
@@ -13,10 +13,19 @@ sections:
   new_doc_ext: md
   templates:
   - blog
-upload_dir: assets
-public_path: https://w1ch0gilgamesh.s3.us-east-2.amazonaws.com/assets
+- type: directory
+  path: static/content/authors
+  label: Authors
+  create: documents
+  match: "**/*"
+  exclude: _index.md
+  new_doc_ext: md
+  templates:
+  - author
+upload_dir: images
+public_path: ''
 front_matter_path: ''
-use_front_matter_path: 
+use_front_matter_path: false
 file_template: ":filename:"
 build:
   preview_output_directory: static/admin
