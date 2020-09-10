@@ -1,0 +1,16 @@
+---
+  label: Social
+  hide_body: false
+  fields:
+  - name: twitter
+    type: text
+    label: Twitter
+  - name: facebook
+    type: text
+    label: Facebook
+  - name: instagram
+    type: text
+    label: Instagram
+  - name: github
+    type: text
+    label: Github

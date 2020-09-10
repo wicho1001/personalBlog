@@ -13,6 +13,15 @@ sections:
   new_doc_ext: md
   templates:
   - blog
+- type: directory
+  path: static/content/authors
+  label: Authors
+  create: documents
+  match: "**/*"
+  exclude: _index.md
+  new_doc_ext: md
+  templates:
+  - author
 upload_dir: images
 public_path: ''
 front_matter_path: ''

@@ -15,6 +15,12 @@ fields:
     required: true
   label: Title
   default: ''
+- name: minutes
+  type: text
+  config:
+    required: true
+  label: MinutesToRead
+  default: 3
 - name: date
   type: datetime
   description: ''
@@ -30,6 +36,18 @@ fields:
   config:
     maxSize: 2
   label: Featured Image
+- name: author
+  type: select
+  default: []
+  config:
+    required: true
+    options: []
+    source:
+      type: pages
+      section: authors
+      file: 
+      path: 
+  label: Author
 - name: seo
   type: include
   config: {}
