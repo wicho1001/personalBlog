@@ -16,9 +16,6 @@
   import FaArrowRight from 'svelte-icons/fa/FaArrowRight.svelte'
 </script>
 
-<style>
-</style>
-
 <svelte:head>
   <title>Blog</title>
 </svelte:head>
