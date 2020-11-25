@@ -53,3 +53,5 @@ fields:
   config: {}
   template: seo-fields
   label: SEO
+pages:
+- static/content/posts/cosas-que-me-gustan-de-angular.md
