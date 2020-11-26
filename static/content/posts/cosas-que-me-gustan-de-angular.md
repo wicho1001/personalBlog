@@ -2,6 +2,7 @@
 type: blog
 minutes: "3"
 date: 2020-11-25T05:13:48.000+00:00
+slug: cosas-que-me-gustan-de-angular
 author: static/content/authors/w1ch0.md
 seo:
   keywords: []
