@@ -1,46 +1,41 @@
-module.exports = {
-  purge: ["./src/**/*.svelte"],
-  theme: {
+const config = {
+	mode: "jit",
+	purge: [
+		"./src/**/*.{html,js,svelte,ts}",
+	],
+	theme: {
     colors: {
       transparent: 'transparent',
       primary: {
-        "50": "#F0F1F2",
-        "100": "#CBB8F0",
-        "200": "#B799E9",
-        "300": "#A57BE4",
-        "400": "#904BDF",
-        "500": "#6233C7",
-        "600": "#5332BE",
-        "700": "#3014A4",
-        "800": "#1D0691",
-        "900": "#0E0085",
+        "50": "var(--primary-50)",
+        "100": "var(--primary-100)",
+        "200": "var(--primary-200)",
+        "300": "var(--primary-300)",
+        "400": "var(--primary-400)",
+        "500": "var(--primary-500)",
+        "600": "var(--primary-600)",
+        "700": "var(--primary-700)",
+        "800": "var(--primary-800)",
+        "900": "var(--primary-900)",
       },
       secondary: {
-        "100": "#FFD7B9",
-        "200": "#FBC699",
-        "300": "#F4B270",
-        "400": "#FF9F63",
-        "500": "#E87229",
-        "600": "#FF6D33",
-        "700": "#EF4813",
-        "800": " #CE2B04",
-        "900": "#851200",
+        "100": "var(--secondary-100)",
+        "200": "var(--secondary-200)",
+        "300": "var(--secondary-300)",
+        "400": "var(--secondary-400)",
+        "500": "var(--secondary-500)",
+        "600": "var(--secondary-600)",
+        "700": "var(--secondary-700)",
+        "800": "var(--secondary-800)",
+        "900": "var(--secondary-900)",
       },
-      dark: {
-        "100": "#4C5F73",
-        "200": "#778BA1",
-        "300": "#5D7187",
-        "400": "#405061",
-        "500": "#333E49",
-        "600": "#20272D",
-        "700": "#171D24",
-        "800": " #0F151A",
-        "900": "#0A0E12",
+      surface: {
+        "50": "var(--surface-100)",
+        "100": "var(--surface-100)",
+        "200": "var(--surface-200)",
       },
-      neutral: '#312F2F',
+      neutral: 'var(--neutral)',
       disabled: '#B1B1B1',
-      white: '#FFFFFF',
-      black: '#000000',
     },
     borderRadius: {
       'none': '0',
@@ -225,6 +220,51 @@ module.exports = {
       '2': '8',
       '3': '12'
     },
+    extend: {
+      typography: {
+        DEFAULT: {
+            css: {
+                color: 'var(--surface-200)',
+                h1: {
+                  color: 'var(--surface-200)',
+                },
+                h2: {
+                    color: 'var(--surface-200)',
+                },
+                h3: {
+                    color: 'var(--surface-200)',
+                },
+                h4: {
+                    color: 'var(--surface-200)',
+                },
+                h5: {
+                    color: 'var(--surface-200)',
+                },
+                h6: {
+                    color: 'var(--surface-200)',
+                },
+  
+                strong: {
+                    color: 'var(--surface-200)',
+                },
+  
+                code: {
+                    color: 'var(--surface-200)',
+                },
+  
+                figcaption: {
+                    color: 'var(--surface-100)',
+                },
+                a: {
+                  color: 'var(--primary-600)',
+                  '&:hover': {
+                      color: 'var(--primary-600)',
+                  },
+                },
+            },
+        },
+      },
+    },
   },
   variants: {},
   variants:[ 
@@ -234,4 +274,9 @@ module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
   },
-}
+  plugins: [
+    require('@tailwindcss/typography'),
+  ]
+};
+
+module.exports = config;

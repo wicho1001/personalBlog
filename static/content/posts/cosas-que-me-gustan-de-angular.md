@@ -1,20 +1,17 @@
 ---
-type: blog
-minutes: "3"
-date: 2020-11-25T05:13:48.000+00:00
-slug: cosas-que-me-gustan-de-angular
-author: static/content/authors/w1ch0.md
+minutes: 3
+title: 'Cosas que me gustan de angular'
+date: '2020-11-25T05:13:48.000+00:00'
+slug: 'cosas-que-me-gustan-de-angular'
+author: 'static/content/authors/w1ch0.md'
 seo:
   keywords: []
-  language: ES
-  title: Cosas que me gustan de angular
-  description: Esta es una pequeña descripcion
-  image: "/wicho_logo.png"
-title: Cosas que me gustan de angular
-featured_image: "/wicho.png"
-slug: cosas-que-me-gustan-de-angular
-
+  language: 'ES'
+  title: 'Cosas que me gustan de angular'
+  description: 'Esta es una pequeña descripcion'
+  image: '/wicho_logo.png'
 ---
+
 # Cosas que me gustan de angular
 
 Las tecnologías que permiten que Internet tienda a cambiar, progresar y evolucionar a altas velocidades requieren de unos sistemas que sean capaces de construir mejores versiones del _software_, donde entran el sistema **Angular vs AngularJS** como piezas fundamentales para estos cambios. Angular es un perfecto ejemplo de ello, con grandes cambios en tan solo pocos años.
@@ -27,6 +24,7 @@ AngularJS podría definirse como un marco de **aplicaciones web _front-end_ de c
 
 A continuación, se hace una comparación de AngularJS con Angular, ya que la segunda incluye tanto la versión 2 como la versión 4. De este modo, se realiza una comparación en base a los conceptos de arquitectura, lenguaje, sintaxis de expresión, soporte móvil y enrutamiento.
 
+[google](https://www.google.com)
 ![](/Captura de Pantalla 2020-10-14 a la(s) 16.42.02.png)
 
 ![](/Captura de Pantalla 2020-10-14 a la(s) 16.42.02.png)
