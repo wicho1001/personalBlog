@@ -1,19 +1,23 @@
-<script context="module">
-  export function preload({ params, query }) {
+<script context="module" lang="ts">
+  import type { Load } from "@sveltejs/kit";
 
-  this.fetch(`blog-home.json`).then(r => r.json()).then(blog => {
-    return { blog };
-  })
-  return this.fetch(`/blog.json`).then(r => r.json()).then(posts => {
-      return { posts };
-    });
+  export const load: Load = async ({fetch}) => {
+    const res = await fetch(`/blog/index.json`)
+    const data = await res.json();
+
+    if (data) {
+      return { 
+        props: {
+          posts: data
+          } 
+        }
+    }
+    return { props: {} };
   };
 </script>
 
-<script>
-  import type { IBlog } from './interfaces/IBlog';
-  export let posts: IBlog[];
-  import FaArrowRight from 'svelte-icons/fa/FaArrowRight.svelte'
+<script lang="ts">
+  export let posts: any[];
 </script>
 
 <svelte:head>
@@ -22,7 +26,7 @@
 
 <section class="w-full flex justify-center mb-10">
   <section class="flex flex-col mt-10 w-10/12">
-    <h1 class="font-montserrat font-bold text-4xl text-primary-50 border-primary-500 border-b-2 pb-2">Blogs recientes</h1>
+    <h1 class="font-montserrat font-bold text-4xl text-surface-200 border-primary-500 border-b-2 pb-2">Blogs recientes</h1>
 
     <ul class="grid xs:grid-cols-1 md:grid-cols-3 gap-6 mt-4">
       {#each posts as post}
@@ -32,7 +36,7 @@
               <img class="w-full h-60 object-cover rounded-2" src="{post.featured_image}" alt="">
             </div>
             <div class="flex flex-col flex-grow">
-              <div class="px-8 py-5 flex flex-col flex-grow text-primary-50">
+              <div class="px-8 py-5 flex flex-col flex-grow text-surface-200">
                 <p class="font-rubik text-sm text-dark-100">Tiempo de lectura: {post.minutes} min</p>
                 <p class="font-montserrat font-bold text-2xl capitalize">{post.title}</p>
                 <p class="font-rubik">{post.description}</p>
