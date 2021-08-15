@@ -1,11 +1,17 @@
-const sveltePreprocess = require('svelte-preprocess');
+import preprocess from 'svelte-preprocess';
 
-const defaults = {
-	script: "typescript",
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://github.com/sveltejs/svelte-preprocess
+	// for more information about preprocessors
+	preprocess: [preprocess({
+			"postcss": true
+    })],
+
+	kit: {
+		// hydrate the <div id="svelte"> element in src/app.html
+		target: '#svelte'
+	}
 };
 
-module.exports = {
-    preprocess: sveltePreprocess({ defaults }),
-    defaults,
-    // ...other svelte options (optional)
-}
+export default config;
