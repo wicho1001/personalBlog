@@ -27,7 +27,7 @@ sections:
   new_doc_ext: md
   templates:
   - author
-upload_dir: https://w1ch0images.s3.us-west-2.amazonaws.com
+upload_dir: ''
 public_path: https://w1ch0images.s3.us-west-2.amazonaws.com
 front_matter_path: ''
 use_front_matter_path: 
