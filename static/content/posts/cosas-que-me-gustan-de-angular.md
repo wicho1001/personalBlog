@@ -26,4 +26,5 @@ AngularJS podría definirse como un marco de **aplicaciones web _front-end_ de c
 A continuación, se hace una comparación de AngularJS con Angular, ya que la segunda incluye tanto la versión 2 como la versión 4. De este modo, se realiza una comparación en base a los conceptos de arquitectura, lenguaje, sintaxis de expresión, soporte móvil y enrutamiento.
 
 [google](https://www.google.com)
-![](https://w1ch0images.s3.us-west-2.amazonaws.com/1280x1280-2.jpg)
+
+![](https://w1ch0images.s3.us-west-2.amazonaws.com/Capture.PNG)
