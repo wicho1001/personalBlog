@@ -55,7 +55,7 @@ fields:
       required: true
     label: Descripcion
   - name: video
-    type: url
+    type: text
     config:
       required: true
     label: video
