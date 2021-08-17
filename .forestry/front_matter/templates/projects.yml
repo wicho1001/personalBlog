@@ -1,0 +1,25 @@
+---
+label: Projects
+hide_body: true
+fields:
+- name: project
+  type: field_group
+  config: {}
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: name
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: true
+    label: description
+  - name: url
+    type: url
+    config:
+      required: true
+    label: name
+  label: project
