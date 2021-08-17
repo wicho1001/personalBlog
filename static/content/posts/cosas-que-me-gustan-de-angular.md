@@ -4,7 +4,7 @@ title: Cosas que me gustan de angular
 date: 2020-11-25T05:13:48Z
 slug: cosas-que-me-gustan-de-angular
 author: static/content/authors/w1ch0.md
-featured_image: https://w1ch0images.s3.us-west-2.amazonaws.com/1280x1280-2.jpg
+featured_image: https://w1ch0images.s3.us-west-2.amazonaws.com/images/4a3499c6b5cca368ec4e3717f9077114.gif
 seo:
   keywords:
   - angular
