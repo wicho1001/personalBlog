@@ -4,6 +4,7 @@ title: 'Cosas que me gustan de angular'
 date: '2020-11-25T05:13:48.000+00:00'
 slug: 'cosas-que-me-gustan-de-angular'
 author: 'static/content/authors/w1ch0.md'
+featured_image: "/assets/wicho_logo.png"
 seo:
   keywords: []
   language: 'ES'
@@ -11,8 +12,6 @@ seo:
   description: 'Esta es una pequeña descripcion'
   image: '/wicho_logo.png'
 ---
-
-# Cosas que me gustan de angular
 
 Las tecnologías que permiten que Internet tienda a cambiar, progresar y evolucionar a altas velocidades requieren de unos sistemas que sean capaces de construir mejores versiones del _software_, donde entran el sistema **Angular vs AngularJS** como piezas fundamentales para estos cambios. Angular es un perfecto ejemplo de ello, con grandes cambios en tan solo pocos años.
 
