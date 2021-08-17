@@ -36,22 +36,8 @@ fields:
   config:
     maxSize: 2
   label: Featured Image
-- name: author
-  type: select
-  default: []
-  config:
-    required: true
-    options: []
-    source:
-      type: pages
-      section: authors
-      file: 
-      path: 
-  label: Author
 - name: seo
   type: include
   config: {}
   template: seo-fields
   label: SEO
-pages:
-- static/content/posts/cosas-que-me-gustan-de-angular.md
