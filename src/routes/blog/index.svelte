@@ -67,7 +67,7 @@
       
         <li class="flex flex-col bg-dark-800 col-span-1 w-full">
           <a href="blog/{post.slug}" class="flex flex-col">
-            <img class="w-full h-80 object-cover rounded-t-xl bg-surface-50" src="https://miro.medium.com/max/1000/0*kBHpKva09AsGj7RQ" alt="">
+            <img class="w-full h-80 object-cover rounded-t-xl bg-surface-50" src="{post.featured_image}" alt="">
             <div class="flex flex-col flex-grow bg-surface-100 rounded-b-xl px-8 pt-4 pb-6">
               <p class="font-montserrat font-bold text-surface-900 text-2xl capitalize">{post.title}</p>
               <p class="font-rubik text-surface-600 mt-2 text-xl">{post.description}</p>
