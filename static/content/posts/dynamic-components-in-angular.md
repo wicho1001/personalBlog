@@ -1,7 +1,7 @@
 ---
 type: blog
 minutes: "5"
-date: 2021-08-19T17:58:33Z
+date: 2021-08-19T17:58:33.000+00:00
 seo:
   keywords:
   - Angular
@@ -17,6 +17,7 @@ seo:
   image: https://w1ch0images.s3.us-west-2.amazonaws.com/c23ff3f2-d492-47d3-a060-742cdf98a2f9.jpg
 title: Dynamic Components in Angular
 featured_image: https://w1ch0images.s3.us-west-2.amazonaws.com/c23ff3f2-d492-47d3-a060-742cdf98a2f9.jpg
+slug: dynamic-components-in-angular
 
 ---
 To know how to make dynamic components we need to understand how angular renderer works, so let's start.
