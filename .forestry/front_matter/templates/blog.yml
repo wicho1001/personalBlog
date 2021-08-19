@@ -41,3 +41,5 @@ fields:
   config: {}
   template: seo-fields
   label: SEO
+pages:
+- static/content/posts/dynamic-components-in-angular.md
