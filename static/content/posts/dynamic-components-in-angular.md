@@ -42,7 +42,7 @@ So thinking about it we need to answer one question
 
 ## How I can inject views or components inside views?
 
-To answer this question we need to think of one of the basics of programming; references. 
+To answer this question we need to think of one of the basics of programming; references.
 
 The reference more important here is the [viewContainerRef](https://angular.io/api/core/ViewContainerRef), this reference as his name is exactly that a reference to the view Container, so don't overthink it just a reference to the view.
 
@@ -103,13 +103,13 @@ you can see the log in the console of the browser
 
 ![](https://w1ch0images.s3.us-west-2.amazonaws.com/image.png)
 
-_Now you only see a lot of stuff that we are not going to use, but if you're curious to see all the properties right there, then things will be more clear._ 
+_Now you only see a lot of stuff that we are not going to use, but if you're curious to see all the properties right there, then things will be more clear._
 
-Once we see everything is cool, let's implement another concept that is the factory. 
+Once we see everything is cool, let's implement another concept that is the factory.
 
 ### Second Step
 
-As I said we need to implement the factory concept but right now is not necessary that you know everything about it, but if you want to know more about it, here is a [resource](https://refactoring.guru/design-patterns/factory-method). 
+As I said we need to implement the factory concept but right now is not necessary that you know everything about it, but if you want to know more about it, here is a [resource](https://refactoring.guru/design-patterns/factory-method).
 
 Now let's start, in this step, we are going to merge viewContaineRef with [ComponentFactoryResolver](https://angular.io/api/core/ComponentFactoryResolver), so import it to the builder directive.
 
@@ -197,11 +197,11 @@ Let's created a method and use viewContainerRef and ComponentFactoryResolver
     
     }
 
- **Yeees, we have a dynamic component!!**
+![](https://w1ch0images.s3.us-west-2.amazonaws.com/button_works.png)
 
-![](https://w1ch0images.s3.us-west-2.amazonaws.com/image (1).png)
+**Yeees, we have a dynamic component!!**
 
-now pay attention because this is the most simple thing of this `componentRenderer `is a reference of the component that you create, so you can access his instance, to make it more clear let's make an input inside of or component and assign a value to the input through the instance.
+now pay attention because this is the most simple thing of this `componentRenderer`is a reference of the component that you create, so you can access his instance, to make it more clear let's make an input inside of or component and assign a value to the input through the instance.
 
      import { Component, Input, OnInit } from '@angular/core';
     
@@ -254,6 +254,6 @@ now in the directive
     
     }
 
-![](https://w1ch0images.s3.us-west-2.amazonaws.com/image (2).png)
+![](https://w1ch0images.s3.us-west-2.amazonaws.com/hello_world_buttom.png)
 
 **Nice, we did it!!**
