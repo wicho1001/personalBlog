@@ -228,31 +228,33 @@ const config = {
                   color: 'var(--surface-900)',
                 },
                 h2: {
-                    color: 'var(--surface-900)',
+                  color: 'var(--surface-900)',
                 },
                 h3: {
-                    color: 'var(--surface-900)',
+                  color: 'var(--surface-900)',
                 },
                 h4: {
-                    color: 'var(--surface-900)',
+                  color: 'var(--surface-900)',
                 },
                 h5: {
-                    color: 'var(--surface-900)',
+                  color: 'var(--surface-900)',
                 },
                 h6: {
-                    color: 'var(--surface-900)',
+                  color: 'var(--surface-900)',
                 },
-  
+                blockquote: {
+                  color: 'var(--surface-900)',
+                },
                 strong: {
-                    color: 'var(--surface-900)',
+                  color: 'var(--surface-900)',
                 },
   
                 code: {
-                    color: 'var(--surface-900)',
+                  color: 'var(--surface-900)',
                 },
   
                 figcaption: {
-                    color: 'var(--surface-700)',
+                  color: 'var(--surface-700)',
                 },
                 a: {
                   color: 'var(--primary-600)',
