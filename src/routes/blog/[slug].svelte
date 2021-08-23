@@ -35,8 +35,15 @@
 
 
 <svelte:head>
-  <title>{post.title}</title>
+  <title>{post.seo.title}</title>
+  <meta name="keywords" content={post.seo.keywords.join(',')}/>
+  <meta name="description" content={post.seo.description} />
+  <meta property="og:title" content={post.seo.title}/>
+  <meta property="og:image" content={post.seo.image}/>
+  <meta property="og:image:secure_url" content={post.seo.image}/>
+  <meta property="og:description" content={post.seo.description}/>
 </svelte:head>
+
 
 <div class="flex flex-col items-center relative font-rubik text-surface-900 w-full mx-auto mt-10">
   <div class="xs:hidden md:block">

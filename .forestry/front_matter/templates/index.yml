@@ -22,7 +22,7 @@ fields:
     config:
       required: true
     label: Descripcion
-  label: bio
+  label: biography
   config: {}
 - name: services
   type: field_group_list
@@ -54,11 +54,11 @@ fields:
     config:
       required: true
     label: Descripcion
-  - name: video
-    type: text
+  - name: featured_image
+    type: file
     config:
-      required: true
-    label: video
+      maxSize: 2
+    label: Featured Image
   label: Projects
   config: {}
 - name: seo

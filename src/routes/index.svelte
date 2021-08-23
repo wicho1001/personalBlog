@@ -22,7 +22,13 @@
 </script>
 
 <svelte:head>
-  <title>W1CH0</title>
+  <title>{article.seo.title}</title>
+  <meta name="keywords" content={article.seo.keywords.join(',')}/>
+  <meta name="description" content={article.seo.description} />
+  <meta property="og:title" content={article.seo.title}/>
+  <meta property="og:image" content={article.seo.image}/>
+  <meta property="og:image:secure_url" content={article.seo.image}/>
+  <meta property="og:description" content={article.seo.description}/>
 </svelte:head>
 
 {#if article.bio}
@@ -146,7 +152,7 @@
           <div class="grid xs:grid-cols-1 gap-6 mt-10">
             {#each article.projects as project, index}
               <div class="flex xs:flex-col xl:flex-row items-center px-6 py-4 rounded-xl col-span-1">
-                <img class="rounded-xl h-60 min-w-100 object-fill z-1" src="https://via.placeholder.com/300" alt="">
+                <img class="rounded-xl h-60 min-w-100 object-fill z-1" src="{project.featured_image}" alt="">
                 <div class="flex flex-col px-6 py-4 h-full">
                   <h3 class="font-montserrat font-bold text-2xl mt-3 text-surface-900">{project.name}</h3>
                   <p class="mt-6 font-rubik text-surface-900 text-xl">
