@@ -1,46 +1,45 @@
-module.exports = {
-  purge: ["./src/**/*.svelte"],
-  theme: {
+const config = {
+	mode: "jit",
+	purge: [
+		"./src/**/*.{html,js,svelte,ts}",
+	],
+	theme: {
     colors: {
       transparent: 'transparent',
       primary: {
-        "50": "#F0F1F2",
-        "100": "#CBB8F0",
-        "200": "#B799E9",
-        "300": "#A57BE4",
-        "400": "#904BDF",
-        "500": "#6233C7",
-        "600": "#5332BE",
-        "700": "#3014A4",
-        "800": "#1D0691",
-        "900": "#0E0085",
+        "100": "var(--primary-100)",
+        "200": "var(--primary-200)",
+        "300": "var(--primary-300)",
+        "400": "var(--primary-400)",
+        "500": "var(--primary-500)",
+        "600": "var(--primary-600)",
+        "700": "var(--primary-700)",
+        "800": "var(--primary-800)",
+        "900": "var(--primary-900)",
       },
       secondary: {
-        "100": "#FFD7B9",
-        "200": "#FBC699",
-        "300": "#F4B270",
-        "400": "#FF9F63",
-        "500": "#E87229",
-        "600": "#FF6D33",
-        "700": "#EF4813",
-        "800": " #CE2B04",
-        "900": "#851200",
+        "100": "var(--secondary-100)",
+        "200": "var(--secondary-200)",
+        "300": "var(--secondary-300)",
+        "400": "var(--secondary-400)",
+        "500": "var(--secondary-500)",
+        "600": "var(--secondary-600)",
+        "700": "var(--secondary-700)",
       },
-      dark: {
-        "100": "#4C5F73",
-        "200": "#778BA1",
-        "300": "#5D7187",
-        "400": "#405061",
-        "500": "#333E49",
-        "600": "#20272D",
-        "700": "#171D24",
-        "800": " #0F151A",
-        "900": "#0A0E12",
+      surface: {
+        "50": "var(--surface-50)",
+        "100": "var(--surface-100)",
+        "200": "var(--surface-200)",
+        "300": "var(--surface-300)",
+        "400": "var(--surface-400)",
+        "500": "var(--surface-500)",
+        "600": "var(--surface-600)",
+        "700": "var(--surface-700)",
+        "800": "var(--surface-800)",
+        "900": "var(--surface-900)",
       },
-      neutral: '#312F2F',
+      neutral: 'var(--neutral)',
       disabled: '#B1B1B1',
-      white: '#FFFFFF',
-      black: '#000000',
     },
     borderRadius: {
       'none': '0',
@@ -68,17 +67,9 @@ module.exports = {
       '6xl': '64px',
     },
     boxShadow: {
-      default: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-      md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-      lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-      xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-      '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-      inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
-      outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
-      none: 'none',
-      'box': '0 0 10px 0 rgba(38,39,41,0.2)',
-      'up-box': '0 10px 10px 0 rgba(224,230,234,0.8)',
-      'down-box': '0 2px 2px 0 rgba(224,230,234,0.8)',
+      default: '5px 5px 5px 5px var(--surface-200)',
+      'up-box': '0 10px 10px 0 var(--surface-200)',
+      'down-box': '0 2px 2px 0 var(--surface-200)',
     },
     spacing: {
       npx: '-1px',
@@ -225,8 +216,71 @@ module.exports = {
       '2': '8',
       '3': '12'
     },
+    fill: {
+      current: 'currentColor',
+    },
+    extend: {
+      typography: {
+        DEFAULT: {
+            css: {
+                color: 'var(--surface-900)',
+                h1: {
+                  color: 'var(--surface-900)',
+                },
+                h2: {
+                  color: 'var(--surface-900)',
+                },
+                h3: {
+                  color: 'var(--surface-900)',
+                },
+                h4: {
+                  color: 'var(--surface-900)',
+                },
+                h5: {
+                  color: 'var(--surface-900)',
+                },
+                h6: {
+                  color: 'var(--surface-900)',
+                },
+                blockquote: {
+                  color: 'var(--surface-900)',
+                },
+                strong: {
+                  color: 'var(--surface-900)',
+                },
+  
+                code: {
+                  color: 'var(--surface-900)',
+                },
+  
+                figcaption: {
+                  color: 'var(--surface-700)',
+                },
+                a: {
+                  color: 'var(--primary-600)',
+                  '&:hover': {
+                      color: 'var(--primary-600)',
+                  },
+                },
+            },
+        },
+      },
+      minWidth: (theme) => ({
+        ...theme("spacing")
+      }),
+      maxWidth: (theme) => ({
+        ...theme("spacing")
+      }),
+    },
   },
-  variants: {},
+  variants: {
+    extend: {
+      transitionProperty: ['responsive', 'motion-safe', 'motion-reduce', 'display'],
+      transitionDuration: ['hover', 'focus', 'group-hover'],
+      divideColor: ['group-hover'],
+      display: ['group-hover']
+    }
+  },
   variants:[ 
     'active',
     'responsive',
@@ -234,4 +288,9 @@ module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
   },
-}
+  plugins: [
+    require('@tailwindcss/typography'),
+  ]
+};
+
+module.exports = config;

@@ -1,22 +1,20 @@
 ---
-type: blog
 minutes: "3"
-date: 2020-11-25T05:13:48.000+00:00
+title: Cosas que me gustan de angular
+date: 2020-11-25T05:13:48Z
 slug: cosas-que-me-gustan-de-angular
 author: static/content/authors/w1ch0.md
+featured_image: https://w1ch0images.s3.us-west-2.amazonaws.com/images/4a3499c6b5cca368ec4e3717f9077114.gif
 seo:
-  keywords: []
+  keywords:
+  - angular
+  - wicho
   language: ES
   title: Cosas que me gustan de angular
   description: Esta es una pequeña descripcion
-  image: "/wicho_logo.png"
-title: Cosas que me gustan de angular
-featured_image: "/wicho.png"
-slug: cosas-que-me-gustan-de-angular
+  image: https://w1ch0images.s3.us-west-2.amazonaws.com/1280x1280-2.jpg
 
 ---
-# Cosas que me gustan de angular
-
 Las tecnologías que permiten que Internet tienda a cambiar, progresar y evolucionar a altas velocidades requieren de unos sistemas que sean capaces de construir mejores versiones del _software_, donde entran el sistema **Angular vs AngularJS** como piezas fundamentales para estos cambios. Angular es un perfecto ejemplo de ello, con grandes cambios en tan solo pocos años.
 
 Google, al ver estos avances, desarrolló AngularJs en 2009 y la versión 1.0 se lanzó tres años más tarde. Desde entonces, Angular ha sido el sistema que ha dominado el mundo de los marcos JavaScript de códigos abiertos, con un apoyo incondicional y una adopción general entre las empresas y los particulares. De este modo, el resultado ha sido que Angular ha evolucionado de la versión 1.0 de AngularJS a la versión 2.0 de Angular, derivando también en procesos que han llevado a tener la versión 4.0 de Angular en tan solo cinco años.
@@ -27,6 +25,6 @@ AngularJS podría definirse como un marco de **aplicaciones web _front-end_ de c
 
 A continuación, se hace una comparación de AngularJS con Angular, ya que la segunda incluye tanto la versión 2 como la versión 4. De este modo, se realiza una comparación en base a los conceptos de arquitectura, lenguaje, sintaxis de expresión, soporte móvil y enrutamiento.
 
-![](/Captura de Pantalla 2020-10-14 a la(s) 16.42.02.png)
+[google](https://www.google.com)
 
-![](/Captura de Pantalla 2020-10-14 a la(s) 16.42.02.png)
+![](https://w1ch0images.s3.us-west-2.amazonaws.com/Capture.PNG)

@@ -2,37 +2,53 @@ import path from "path";
 import fs from "fs";
 import grayMatter from "gray-matter";
 import marked from "marked";
-import type { Request, Response, NextFunction } from "express";
 
 const getPost = (__filename: any) => {
-  return fs.readFileSync(
+  const post = fs.readFileSync(
     path.resolve("static/content/posts/", `${__filename}.md`),
     "utf-8"
   );
+  
+  const { data, content } = grayMatter(post);
+  const renderer = new marked.Renderer();
+  renderer.link = function(href, title, text) {
+    var link = marked.Renderer.prototype.link.call(this, href, title, text);
+    return link.replace("<a","<a target='_blank' ");
+  };
+  marked.setOptions({
+    renderer: renderer
+  });
+  const html = marked(content, { renderer });
+  return { html, data, content };
 }
 
-export function get(req: Request, res: Response, _: NextFunction) {
-  const { slug } = req.params;
-  const post = getPost(slug);
-  const renderer = new marked.Renderer();
 
-  const { data, content } = grayMatter(post);
-  const html = marked(content, { renderer });
-
-  if(html) {
-    res.writeHead(200, {
-      "Content-Type": "application/json",
+const getAllPost = () => {
+  try {
+    return fs.readdirSync("static/content/posts").map((__filename) => {
+      const post = getPost(__filename.split('.md')[0])
+      return {...post.data, description: `${post.content.slice(0, 50)}...`};
     });
-    res.end(JSON.stringify({ html, ...data }));
-  } else {
-    res.writeHead(404, {
-      "Content-Type": "application/json",
-    })
+  } catch(e) {
+    return []
+  }
+};
 
-    res.end(
-      JSON.stringify({
-        message: `Not found`,
-      })
-    )
+export function get(req) {
+  const { slug } = req.params;
+  if (slug === 'index') {
+    const posts = getAllPost();
+    if (posts) {
+      return {body: JSON.stringify(posts)};
+    } else {
+      return {body: 'error'};
+    }
+  }
+  const post = getPost(slug);
+  if(post.html) {
+    return {body: JSON.stringify({ html: post.html, ...post.data })};
+  } else {
+    return {body: 'error'};
+    
   }
 }
