@@ -7,7 +7,6 @@ const config = {
     colors: {
       transparent: 'transparent',
       primary: {
-        "50": "var(--primary-50)",
         "100": "var(--primary-100)",
         "200": "var(--primary-200)",
         "300": "var(--primary-300)",
@@ -26,13 +25,18 @@ const config = {
         "500": "var(--secondary-500)",
         "600": "var(--secondary-600)",
         "700": "var(--secondary-700)",
-        "800": "var(--secondary-800)",
-        "900": "var(--secondary-900)",
       },
       surface: {
-        "50": "var(--surface-100)",
+        "50": "var(--surface-50)",
         "100": "var(--surface-100)",
         "200": "var(--surface-200)",
+        "300": "var(--surface-300)",
+        "400": "var(--surface-400)",
+        "500": "var(--surface-500)",
+        "600": "var(--surface-600)",
+        "700": "var(--surface-700)",
+        "800": "var(--surface-800)",
+        "900": "var(--surface-900)",
       },
       neutral: 'var(--neutral)',
       disabled: '#B1B1B1',
@@ -63,17 +67,9 @@ const config = {
       '6xl': '64px',
     },
     boxShadow: {
-      default: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-      md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-      lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-      xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-      '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-      inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
-      outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
-      none: 'none',
-      'box': '0 0 10px 0 rgba(38,39,41,0.2)',
-      'up-box': '0 10px 10px 0 rgba(224,230,234,0.8)',
-      'down-box': '0 2px 2px 0 rgba(224,230,234,0.8)',
+      default: '5px 5px 5px 5px var(--surface-200)',
+      'up-box': '0 10px 10px 0 var(--surface-200)',
+      'down-box': '0 2px 2px 0 var(--surface-200)',
     },
     spacing: {
       npx: '-1px',
@@ -220,40 +216,45 @@ const config = {
       '2': '8',
       '3': '12'
     },
+    fill: {
+      current: 'currentColor',
+    },
     extend: {
       typography: {
         DEFAULT: {
             css: {
-                color: 'var(--surface-200)',
+                color: 'var(--surface-900)',
                 h1: {
-                  color: 'var(--surface-200)',
+                  color: 'var(--surface-900)',
                 },
                 h2: {
-                    color: 'var(--surface-200)',
+                  color: 'var(--surface-900)',
                 },
                 h3: {
-                    color: 'var(--surface-200)',
+                  color: 'var(--surface-900)',
                 },
                 h4: {
-                    color: 'var(--surface-200)',
+                  color: 'var(--surface-900)',
                 },
                 h5: {
-                    color: 'var(--surface-200)',
+                  color: 'var(--surface-900)',
                 },
                 h6: {
-                    color: 'var(--surface-200)',
+                  color: 'var(--surface-900)',
                 },
-  
+                blockquote: {
+                  color: 'var(--surface-900)',
+                },
                 strong: {
-                    color: 'var(--surface-200)',
+                  color: 'var(--surface-900)',
                 },
   
                 code: {
-                    color: 'var(--surface-200)',
+                  color: 'var(--surface-900)',
                 },
   
                 figcaption: {
-                    color: 'var(--surface-100)',
+                  color: 'var(--surface-700)',
                 },
                 a: {
                   color: 'var(--primary-600)',
@@ -264,9 +265,22 @@ const config = {
             },
         },
       },
+      minWidth: (theme) => ({
+        ...theme("spacing")
+      }),
+      maxWidth: (theme) => ({
+        ...theme("spacing")
+      }),
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      transitionProperty: ['responsive', 'motion-safe', 'motion-reduce', 'display'],
+      transitionDuration: ['hover', 'focus', 'group-hover'],
+      divideColor: ['group-hover'],
+      display: ['group-hover']
+    }
+  },
   variants:[ 
     'active',
     'responsive',

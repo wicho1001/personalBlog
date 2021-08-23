@@ -1,0 +1,68 @@
+---
+label: home
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: titulo
+  default: ''
+- name: bio
+  type: field_group_list
+  fields:
+  - name: gretting
+    type: text
+    config:
+      required: true
+    label: name
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: true
+    label: Descripcion
+  label: biography
+  config: {}
+- name: services
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: name
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: true
+    label: Descripcion
+  label: Services
+  config: {}
+- name: projects
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: name
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: true
+    label: Descripcion
+  - name: featured_image
+    type: file
+    config:
+      maxSize: 2
+    label: Featured Image
+  label: Projects
+  config: {}
+- name: seo
+  type: include
+  config: {}
+  template: seo-fields
+  label: SEO

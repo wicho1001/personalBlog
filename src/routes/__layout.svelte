@@ -13,9 +13,9 @@
   {/if}
 </svelte:head>
 
-<main class="flex flex-col h-screen overflow-y-scroll px-4 bg-neutral">
+<main class="flex flex-col h-screen overflow-y-scroll bg-surface-50">
   <Nav></Nav>
-  <section class="flex-grow xs:w-full md:w-9/12 mx-auto">
+  <section class="flex-grow">
     <slot></slot>
   </section>
   <FooterComponent></FooterComponent>

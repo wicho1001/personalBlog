@@ -2,6 +2,11 @@
 label: Blog
 hide_body: false
 fields:
+- name: slug
+  type: text
+  config:
+    required: true
+  label: Slug
 - name: type
   type: text
   config:
@@ -36,22 +41,10 @@ fields:
   config:
     maxSize: 2
   label: Featured Image
-- name: author
-  type: select
-  default: []
-  config:
-    required: true
-    options: []
-    source:
-      type: pages
-      section: authors
-      file: 
-      path: 
-  label: Author
 - name: seo
   type: include
   config: {}
   template: seo-fields
   label: SEO
 pages:
-- static/content/posts/cosas-que-me-gustan-de-angular.md
+- static/content/posts/dynamic-components-in-angular.md

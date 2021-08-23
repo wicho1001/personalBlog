@@ -4,6 +4,11 @@ auto_deploy: false
 admin_path: static/admin
 webhook_url: 
 sections:
+- type: document
+  path: static/content/pages/index.md
+  label: Home
+  templates:
+  - index
 - type: directory
   path: static/content/posts
   label: Posts
@@ -22,10 +27,10 @@ sections:
   new_doc_ext: md
   templates:
   - author
-upload_dir: images
-public_path: ''
+upload_dir: ''
+public_path: https://w1ch0images.s3.us-west-2.amazonaws.com
 front_matter_path: ''
-use_front_matter_path: false
+use_front_matter_path: 
 file_template: ":filename:"
 build:
   preview_output_directory: static/admin
