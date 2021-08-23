@@ -22,13 +22,13 @@
 </script>
 
 <svelte:head>
-  <title>{article.seo.title}</title>
-  <meta name="keywords" content={article.seo.keywords.join(',')}/>
-  <meta name="description" content={article.seo.description} />
-  <meta property="og:title" content={article.seo.title}/>
-  <meta property="og:image" content={article.seo.image}/>
-  <meta property="og:image:secure_url" content={article.seo.image}/>
-  <meta property="og:description" content={article.seo.description}/>
+  <title>{article.seo?.title}</title>
+  <meta name="keywords" content={article.seo?.keywords.join(',')}/>
+  <meta name="description" content={article.seo?.description} />
+  <meta property="og:title" content={article.seo?.title}/>
+  <meta property="og:image" content={article.seo?.image}/>
+  <meta property="og:image:secure_url" content={article.seo?.image}/>
+  <meta property="og:description" content={article.seo?.description}/>
 </svelte:head>
 
 {#if article.bio}

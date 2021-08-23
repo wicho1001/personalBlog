@@ -63,4 +63,17 @@ projectContact: {
     file: "https://drive.google.com/uc?export=download&id=1sYO0imeaOLeHA5CapIdd2Zyi6AYNSasC"
   }
 }
+seo:
+  keywords:
+  - Angular
+  - Dynamic components
+  - ViewContainerRef
+  - Views
+  - Components
+  - embeded views
+  language: ES
+  title: Dynamic components
+  description: 'Explain about how to make dynamic components and how angular renderer
+    works '
+  image: https://w1ch0images.s3.us-west-2.amazonaws.com/c23ff3f2-d492-47d3-a060-742cdf98a2f9.jpg
 ---
