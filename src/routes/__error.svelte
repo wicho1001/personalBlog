@@ -12,7 +12,7 @@
 
 <h1>{status}</h1>
 
-<p>{error.message}</p>
+<p>Error</p>
 
 <!-- {#if dev && error.stack}
   <pre>{error.stack}</pre>
