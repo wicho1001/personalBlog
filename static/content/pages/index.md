@@ -25,10 +25,9 @@ projects:
 - name: App captura
   description: App captura is...
   featured_image: https://w1ch0images.s3.us-west-2.amazonaws.com/app_captura.jpg
-- name: Svelte
-  description: " Svelte no es un framework, svelte es un compilador. Al ser así svelte
-    es sumamente ligero. Con ello tomé la decisión de generar este sitio ya que quiero
-    generar el mejor SEO y performance dentro de esta página.\n\nOcupalo, no te arrepentirás. "
+- name: Nemiliz diagnostics
+  description: Nemiliz diagnostic...
+  featured_image: https://w1ch0images.s3.us-west-2.amazonaws.com/nemiliz.png
 projectContact:
   firstSection:
     title: Tienes un proyecto, hablemos!
