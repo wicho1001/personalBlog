@@ -3,9 +3,12 @@ import fs from "fs";
 import grayMatter from "gray-matter";
 import marked from "marked";
 
+const route = process.env.NODE_ENV === 'production' ? 'content/posts/' : 'static/content/posts/';
+
+
 const getPost = (__filename: any) => {
   const post = fs.readFileSync(
-    path.resolve("static/content/posts/", `${__filename}.md`),
+    path.resolve(route, `${__filename}.md`),
     "utf-8"
   );
   
@@ -25,7 +28,7 @@ const getPost = (__filename: any) => {
 
 const getAllPost = () => {
   try {
-    return fs.readdirSync("static/content/posts").map((__filename) => {
+    return fs.readdirSync(route).map((__filename) => {
       const post = getPost(__filename.split('.md')[0])
       return {...post.data, description: `${post.content.slice(0, 50)}...`};
     });
