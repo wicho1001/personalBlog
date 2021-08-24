@@ -1,6 +1,6 @@
 import preprocess from 'svelte-preprocess';
 import vercel from '@sveltejs/adapter-vercel';
-const noExternal = process.env.NODE_ENV === 'production' ? ['date-fns', 'prismic-dom'] : [];
+const noExternal = process.env.NODE_ENV === 'production' ? ['marked', 'gray-matter'] : [];
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
