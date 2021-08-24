@@ -3,7 +3,9 @@
 
   export const load: Load = async ({fetch}) => {
     const res = await fetch(`index.json`)
+    console.log('res: ', res)
     const data = await res.json();
+    console.log('data: ', data)
     if (data) {
       return {
         props: {
@@ -38,7 +40,7 @@
         <div class="flex flex-col xs:w-full md:w-2/5 pr-5 xs:mt-4 md:mt-0">
           <div class="relative flex flex-col max-w-max">
             <div class="flex items-center">
-              <h1 class="text-surface-900 font-montserrat font-bold text-5xl tracking-wider break-words">{article.bio.gretting}</h1>
+              <h1 class="text-surface-900 font-montserrat font-bold text-5xl tracking-wider break-words">Hi, I'm Wicho</h1>
               <svg class="xs:hidden md:block fill-current text-secondary-400 ml-10" width="59" height="18" viewBox="0 0 59 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M54.84 8.83997L48.01 15.68L50.02 17.69L58.87 8.83997L50.02 0L48.01 2.01001L54.84 8.83997ZM30.84 8.83997L24.01 15.68L26.02 17.69L34.87 8.83997L26.02 0L24.01 2.01001L30.84 8.83997ZM18.9099 8.83997L12.08 15.68L14.0899 17.69L22.9399 8.83997L14.0899 0L12.08 2.01001L18.9099 8.83997ZM-3.31092e-05 15.68L6.83996 8.83997L-3.31092e-05 2.01001L2.01999 0L10.86 8.83997L2.01999 17.69L-3.31092e-05 15.68ZM36.08 15.68L42.9099 8.83997L36.08 2.01001L38.0899 0L46.9399 8.83997L38.0899 17.69L36.08 15.68Z" />
               </svg>
@@ -152,7 +154,7 @@
           <div class="grid xs:grid-cols-1 gap-6 mt-10">
             {#each article.projects as project, index}
               <div class="flex xs:flex-col xl:flex-row items-center px-6 py-4 rounded-xl col-span-1">
-                <img class="rounded-xl h-60 min-w-100 object-fill z-1" src="{project.featured_image}" alt="">
+                <img class="rounded-xl h-60 w-100 object-fill z-1" src="{project.featured_image}" alt="">
                 <div class="flex flex-col px-6 py-4 h-full">
                   <h3 class="font-montserrat font-bold text-2xl mt-3 text-surface-900">{project.name}</h3>
                   <p class="mt-6 font-rubik text-surface-900 text-xl">

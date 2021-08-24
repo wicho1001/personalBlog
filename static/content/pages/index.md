@@ -1,11 +1,9 @@
 ---
 title: Bienvenido
 bio:
-- - gretting
-  - Hi, i'm Wicho
-- - description
-  - I'm a Frontend developer in Mexico, I'm currently working in BEDU, my main projects
-    are built in angular. I'm passionate about open source and new types of technologies
+  - gretting: "Hi, i'm Wicho"
+  - description: "I'm a Frontend developer in Mexico, I'm currently working in BEDU, my main projects
+    are built in angular. I'm passionate about open source and new types of technologies"
 services:
 - name: UI Development
   description: " At my day of day in my work i currently seeing a lot of UI, I been
