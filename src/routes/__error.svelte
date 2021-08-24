@@ -1,19 +1,16 @@
-<script>
-  export let status;
-  export let error;
-
-  const dev = process.env.NODE_ENV === 'development';
-  console.log(error)
+<script context="module">
+	export function load({ error, status }) {
+		return {
+			props: {
+				title: `${status}: ${error.message}`
+			}
+		};
+	}
 </script>
 
-<svelte:head>
-  <title>{status}</title>
-</svelte:head>
+<script>
+	export let title;
+  console.log(title)
+</script>
 
-<h1>{status}</h1>
-
-<p>Error</p>
-
-<!-- {#if dev && error.stack}
-  <pre>{error.stack}</pre>
-{/if} -->
+<h1>{title}</h1>
