@@ -22,11 +22,9 @@ projects:
 - name: App bedu
   description: " Is system..."
   featured_image: https://w1ch0images.s3.us-west-2.amazonaws.com/app_bedu.png
-- name: React
-  description: " Un framework si se puede llegar a decir, tengo sentimientos encontrados
-    con este framework ya que no llega a ser lo suficientemente robusto para llegar
-    a ser un framework sin en cambio es un framework con el que puedes iniciar y crear
-    cosas muy fancys.\n\nReact te ayudará a crear proyectos medianos rápidamente. "
+- name: App captura
+  description: App captura is...
+  featured_image: https://w1ch0images.s3.us-west-2.amazonaws.com/app_captura.jpg
 - name: Svelte
   description: " Svelte no es un framework, svelte es un compilador. Al ser así svelte
     es sumamente ligero. Con ello tomé la decisión de generar este sitio ya que quiero
