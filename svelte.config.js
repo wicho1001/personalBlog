@@ -14,6 +14,13 @@ const config = {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 		adapter: vercel(),
+		vite: {
+      resolve: {
+        alias: [
+          { find: "#/", replacement: path.join(import.meta.url, "./src") },
+        ],
+      },
+    },
 
 	}
 };
