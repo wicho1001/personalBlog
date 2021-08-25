@@ -5,12 +5,12 @@ admin_path: static/admin
 webhook_url: 
 sections:
 - type: document
-  path: static/content/pages/index.md
+  path: src/api/content/pages/index.md
   label: Home
   templates:
   - index
 - type: directory
-  path: static/content/posts
+  path: src/api/content/posts
   label: Posts
   create: documents
   match: "**/*"
@@ -19,7 +19,7 @@ sections:
   templates:
   - blog
 - type: directory
-  path: static/content/authors
+  path: src/api/content/authors
   label: Authors
   create: documents
   match: "**/*"

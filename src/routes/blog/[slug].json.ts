@@ -3,7 +3,8 @@ import fs from "fs";
 import grayMatter from "gray-matter";
 import marked from "marked";
 
-const route = 'static/content/posts/';
+
+const route = 'src/api/content/posts/';
 
 
 const getPost = (__filename: any) => {
