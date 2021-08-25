@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import grayMatter from "gray-matter";
 
-const route = './src/api/content/pages/';
+const route = 'src/api/content/pages/';
 
 
 
