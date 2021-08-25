@@ -3,11 +3,11 @@ import fs from "fs";
 import grayMatter from "gray-matter";
 import marked from "marked";
 
-const route = 'src/api/content/posts/';
+const route = './src/api/content/posts/';
 
 const getPost = (__filename: any) => {
   const post = fs.readFileSync(
-    path.join(route, `${__filename}.md`),
+    path.resolve(route, `${__filename}.md`),
     "utf-8"
   );
   

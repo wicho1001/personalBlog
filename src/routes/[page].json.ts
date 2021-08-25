@@ -2,13 +2,13 @@ import fs from "fs";
 import path from "path";
 import grayMatter from "gray-matter";
 
-const route = 'src/api/content/pages/';
+const route = './src/api/content/pages/';
 
 
 
 const getPage = (__filename: string) => {
   return fs.readFileSync(
-    path.join(route, `${__filename}.md`),
+    path.resolve(route, `${__filename}.md`),
     "utf-8"
   );
 };
