@@ -3,9 +3,7 @@ import fs from "fs";
 import grayMatter from "gray-matter";
 import marked from "marked";
 
-
-const route = 'src/api/content/posts/';
-
+const route = process.env.NODE_ENV === 'production' ? 'content/posts/' : 'static/content/posts/';
 
 const getPost = (__filename: any) => {
   const post = fs.readFileSync(
