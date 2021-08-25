@@ -8,7 +8,7 @@ const route = './src/api/content/posts/';
 const getPost = (__filename: any) => {
   console.log(route)
   const post = fs.readFileSync(
-    path.join(route, `${__filename}.md`),
+    route + `${__filename}.md`,
     "utf-8"
   );
   console.log(post)
