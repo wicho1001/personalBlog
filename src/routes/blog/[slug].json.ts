@@ -6,11 +6,12 @@ import marked from "marked";
 const route = './src/api/content/posts/';
 
 const getPost = (__filename: any) => {
+  console.log(route)
   const post = fs.readFileSync(
     path.resolve(route, `${__filename}.md`),
     "utf-8"
   );
-  
+  console.log(post)
   const { data, content } = grayMatter(post);
   const renderer = new marked.Renderer();
   renderer.link = function(href, title, text) {
