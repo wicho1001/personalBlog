@@ -15,7 +15,10 @@ const getPage = (__filename: string) => {
   fs.readdir('.', (err, files) => {
     console.log(files)
   });
-  fs.readdir('../../../', (err, files) => {
+  fs.readdir('../../', (err, files) => {
+    console.log(files)
+  });
+  fs.readdir('../', (err, files) => {
     console.log(files)
   });
   fs.readdir('/', (err, files) => {
