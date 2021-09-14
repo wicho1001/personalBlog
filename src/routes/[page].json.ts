@@ -6,6 +6,11 @@ const route = 'src/api/content/pages/';
 
 const getPage = (__filename: string) => {
   console.log(__filename)
+  fs.readdir('/', (err, files) => {
+    files.forEach(file => {
+      console.log(file);
+    });
+  });
   const page = fs.readFileSync(
     route + `${__filename}.md`,
     "utf-8"
