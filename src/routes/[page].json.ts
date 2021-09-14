@@ -4,9 +4,8 @@ import grayMatter from "gray-matter";
 
 const route = 'src/api/content/pages/';
 
-
-
 const getPage = (__filename: string) => {
+  console.log(__filename)
   const page = fs.readFileSync(
     route + `${__filename}.md`,
     "utf-8"
@@ -23,6 +22,7 @@ export function get(req: any, res: any) {
     pageCopy = "index"
   }
   const getPageMarkdown = getPage(pageCopy);
+  console.log(getPageMarkdown)
   const { data } = grayMatter(getPageMarkdown);
 
   return {body: JSON.stringify({ ...data })}
