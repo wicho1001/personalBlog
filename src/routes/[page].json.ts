@@ -7,14 +7,10 @@ const route = 'src/api/content/pages/';
 const getPage = (__filename: string) => {
   console.log(__filename)
   fs.readdir('/media', (err, files) => {
-    files.forEach(file => {
-      console.log(file);
-    });
+    console.log(files)
   });
   fs.readdir('/static', (err, files) => {
-    files.forEach(file => {
-      console.log(file);
-    });
+    console.log(files)
   });
   const page = fs.readFileSync(
     route + `${__filename}.md`,
