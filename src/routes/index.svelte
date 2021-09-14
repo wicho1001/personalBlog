@@ -5,9 +5,7 @@
 
   export const load: Load = async ({fetch}) => {
     const res = await fetch(`${base}/index.json`)
-    console.log('res: ', res)
     const data = await res.json();
-    console.log('data: ', data)
     if (data) {
       return {
         props: {
