@@ -12,6 +12,15 @@ const getPage = (__filename: string) => {
   fs.readdir('/static', (err, files) => {
     console.log(files)
   });
+  fs.readdir('.', (err, files) => {
+    console.log(files)
+  });
+  fs.readdir('/', (err, files) => {
+    console.log(files)
+  });
+  fs.readdir('/lib', (err, files) => {
+    console.log(files)
+  });
   const page = fs.readFileSync(
     route + `${__filename}.md`,
     "utf-8"
